@@ -330,11 +330,13 @@
 
 <!-- Input para trabajr con NgModel -->
 
-<form [formControlName="control"]="miFormulario">
+<form [formGroup]="miFormulario">
   <input type="text" placeholder="Nombre del usuario" formControlName="name" />
 </form>
 
 <app-saludo [nombre]="user"></app-saludo>
+<app-saludo [nombre]="miFormulario.get('name')?.value || 'Anonimo'"></app-saludo>
+<app-saludo [nombre]="user" (mensajeEmiter)="recibirMenssajeDelHijo($event)"></app-saludo>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

@@ -1,1 +1,7 @@
 <h1>Hola {{ nombre }}! </h1>
+
+<h3 id="usuario" class="saludo" [innerText]="nombre">
+    <!-- No indicamos nada en las etiquetas, el valor viene definidi por la propiedad -->
+</h3>
+
+<button id="emit-alerta" (click)="alertaSaludo()">Mostrar alerta</button>
