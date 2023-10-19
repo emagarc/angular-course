@@ -326,7 +326,13 @@
 </div>
 
 <div class="content" role="main">
-<h1>Hola {{ name }}!</h1>
+<!-- <h1>Hola {{ name }}!</h1> -->
+
+<!-- Input para trabajr con NgModel -->
+
+<input type="text" placeholder="Nombre del usuario" [(ngModel)]="name"/>
+
+<app-saludo [nombre]="user"></app-saludo>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
