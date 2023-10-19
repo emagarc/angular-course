@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'hola-mundo';
-  name = "Emanuel"
-  user = "@egarmino"
+  miFormulario: FormGroup;
+  title = 'Mi aplicación en Angular';
+  user = "@egarmino";  
+
+  constructor(private fb: FormBuilder) {
+    this.miFormulario = this.fb.group({
+      name: new FormControl("Emanuel")
+    });
+  }
+
+
 }

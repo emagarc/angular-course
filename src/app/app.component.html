@@ -330,7 +330,9 @@
 
 <!-- Input para trabajr con NgModel -->
 
-<input type="text" placeholder="Nombre del usuario" [(ngModel)]="name"/>
+<form [formControlName="control"]="miFormulario">
+  <input type="text" placeholder="Nombre del usuario" formControlName="name" />
+</form>
 
 <app-saludo [nombre]="user"></app-saludo>
 </div>
